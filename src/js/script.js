@@ -20,14 +20,21 @@ document.addEventListener("DOMContentLoaded", function () {
         event.target.textContent = currentPlayer;
 
         if (checkWinner()) {
-            showWinner(`${currentPlayer} wins!`);
+            gameOverMessage.textContent = `${currentPlayer} wins!`;
+            gameOverMessage.style.display = "block";
+            gameOver = true;
+            animateWinner();
+            restartButton.style.display = "block";
             return;
         } else {
             currentPlayer = "O";
         }
 
         if (checkDraw()) {
-            showWinner("It's a draw!");
+            gameOverMessage.textContent = "It's a draw!";
+            gameOverMessage.style.display = "block";
+            gameOver = true;
+            restartButton.style.display = "block";
         } else if (!gameOver) {
             setTimeout(computerMove, 500);
         }
@@ -35,34 +42,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function computerMove() {
         const cells = document.querySelectorAll(".cell");
-        let availableCells = Array.from(cells).filter(cell => cell.textContent === "");
+        let availableCells = [];
+
+        cells.forEach((cell, index) => {
+            if (cell.textContent === "") {
+                availableCells.push(cell);
+            }
+        });
 
         if (availableCells.length > 0) {
             const bestMove = findBestMove();
             bestMove.textContent = "O";
 
             if (checkWinner()) {
-                showWinner("O wins!");
-                return;
+                gameOverMessage.textContent = "O wins!";
+                gameOverMessage.style.display = "block";
+                gameOver = true;
+                animateWinner();
+                restartButton.style.display = "block";
             } else {
                 currentPlayer = "X";
             }
 
             if (checkDraw() && !gameOver) {
-                showWinner("It's a draw!");
+                gameOverMessage.textContent = "It's a draw!";
+                gameOverMessage.style.display = "block";
+                gameOver = true;
+                restartButton.style.display = "block";
             }
         }
     }
 
-    function showWinner(message) {
-        gameOverMessage.textContent = message;
-        gameOverMessage.style.display = "block";
-        gameOver = true;
-        restartButton.style.display = "block";
-    }
-
     function checkWinner() {
         const cells = document.querySelectorAll(".cell");
+
         const winCombinations = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8],
             [0, 3, 6], [1, 4, 7], [2, 5, 8],
@@ -72,22 +85,42 @@ document.addEventListener("DOMContentLoaded", function () {
         for (const combo of winCombinations) {
             const [a, b, c] = combo;
             if (cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[b].textContent === cells[c].textContent) {
-                cells[a].classList.add("winner");
-                cells[b].classList.add("winner");
-                cells[c].classList.add("winner");
+                highlightWinner(cells[a], cells[b], cells[c]);
                 return true;
             }
         }
+
         return false;
+    }
+
+    function highlightWinner(cellA, cellB, cellC) {
+        cellA.style.backgroundColor = "#8bc34a";
+        cellB.style.backgroundColor = "#8bc34a";
+        cellC.style.backgroundColor = "#8bc34a";
+    }
+
+    function animateWinner() {
+        const winningCells = document.querySelectorAll(".cell[style='background-color: #8bc34a;']");
+
+        winningCells.forEach(cell => {
+            cell.style.transition = "transform 0.5s ease-in-out";
+            cell.style.transform = "scale(1.2)";
+        });
     }
 
     function checkDraw() {
         const cells = document.querySelectorAll(".cell");
-        return Array.from(cells).every(cell => cell.textContent !== "");
+        for (const cell of cells) {
+            if (cell.textContent === "") {
+                return false;
+            }
+        }
+        return true;
     }
 
     function findBestMove() {
         const cells = document.querySelectorAll(".cell");
+
         const winCombinations = [
             [0, 1, 2], [3, 4, 5], [6, 7, 8],
             [0, 3, 6], [1, 4, 7], [2, 5, 8],
@@ -107,7 +140,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        if (cells[4].textContent === "") return cells[4];
+        const center = cells[4];
+        if (center.textContent === "") {
+            return center;
+        }
 
         const availableCells = Array.from(cells).filter(cell => cell.textContent === "");
         return availableCells[Math.floor(Math.random() * availableCells.length)];
