@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.target.textContent = currentPlayer;
 
         if (checkWinner()) {
-            gameOverMessage.textContent = `${currentPlayer} wins!`;
+            gameOverMessage.textContent = `${currentPlayer} wins! 🎉`;
             gameOverMessage.style.display = "block";
             gameOver = true;
             animateWinner();
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (checkDraw()) {
-            gameOverMessage.textContent = "It's a draw!";
+            gameOverMessage.textContent = "It's a draw! 😅";
             gameOverMessage.style.display = "block";
             gameOver = true;
             restartButton.style.display = "block";
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cells = document.querySelectorAll(".cell");
         let availableCells = [];
 
-        cells.forEach((cell, index) => {
+        cells.forEach((cell) => {
             if (cell.textContent === "") {
                 availableCells.push(cell);
             }
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             bestMove.textContent = "O";
 
             if (checkWinner()) {
-                gameOverMessage.textContent = "O wins!";
+                gameOverMessage.textContent = "O wins! 🤖";
                 gameOverMessage.style.display = "block";
                 gameOver = true;
                 animateWinner();
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (checkDraw() && !gameOver) {
-                gameOverMessage.textContent = "It's a draw!";
+                gameOverMessage.textContent = "It's a draw! 😅";
                 gameOverMessage.style.display = "block";
                 gameOver = true;
                 restartButton.style.display = "block";
@@ -84,7 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         for (const combo of winCombinations) {
             const [a, b, c] = combo;
-            if (cells[a].textContent && cells[a].textContent === cells[b].textContent && cells[b].textContent === cells[c].textContent) {
+            if (
+                cells[a].textContent &&
+                cells[a].textContent === cells[b].textContent &&
+                cells[b].textContent === cells[c].textContent
+            ) {
                 highlightWinner(cells[a], cells[b], cells[c]);
                 return true;
             }
@@ -94,17 +98,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function highlightWinner(cellA, cellB, cellC) {
-        cellA.style.backgroundColor = "#8bc34a";
-        cellB.style.backgroundColor = "#8bc34a";
-        cellC.style.backgroundColor = "#8bc34a";
+        [cellA, cellB, cellC].forEach(cell => {
+            cell.classList.add("winner"); // CSS se neon effect apply hoga
+        });
     }
 
     function animateWinner() {
-        const winningCells = document.querySelectorAll(".cell[style='background-color: #8bc34a;']");
+        const winningCells = document.querySelectorAll(".winner");
 
         winningCells.forEach(cell => {
-            cell.style.transition = "transform 0.5s ease-in-out";
-            cell.style.transform = "scale(1.2)";
+            cell.style.animation = "winnerGlow 1s infinite alternate";
         });
     }
 
@@ -131,11 +134,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const [a, b, c] = combo;
             const combination = [cells[a], cells[b], cells[c]];
 
-            if (combination.filter(cell => cell.textContent === "O").length === 2 && combination.some(cell => cell.textContent === "")) {
+            if (combination.filter(cell => cell.textContent === "O").length === 2 &&
+                combination.some(cell => cell.textContent === "")) {
                 return combination.find(cell => cell.textContent === "");
             }
 
-            if (combination.filter(cell => cell.textContent === "X").length === 2 && combination.some(cell => cell.textContent === "")) {
+            if (combination.filter(cell => cell.textContent === "X").length === 2 &&
+                combination.some(cell => cell.textContent === "")) {
                 return combination.find(cell => cell.textContent === "");
             }
         }
