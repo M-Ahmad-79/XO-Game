@@ -62,7 +62,7 @@ This project is open-source and available under the **MIT License**.
         </a>
       </td>
       <td>
-        <a href="www.linkedin.com/in/muhammad-ahmad-788b62338" target="_blank">
+        <a href="www.linkedin.com/in/muhammad-ahmad-788b62338/" target="_blank">
           <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/linkedin.svg"
                height="40" width="40" alt="LinkedIn" title="LinkedIn" />
         </a>
