@@ -5,55 +5,64 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #1d2671, #c33764);
+    background-color: #f0f4f8;
     font-family: 'Arial', sans-serif;
     flex-direction: column;
     box-sizing: border-box;
-    color: white;
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 8px;
     max-width: 350px;
     max-height: 350px;
     width: 100%;
-    background-color: #222;
+    height: 100vh;
+    background-color: #fff;
     padding: 10px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
-    color: #fff;
-    background: #333;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cell:hover {
-    background-color: #444;
+    background-color: #e0e0e0;
     transform: scale(1.1);
-    box-shadow: 0 0 15px #ffeb3b;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#game-board {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
 }
 
 #game-over-message {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
+    color: #333;
     margin-top: 15px;
-    display: none;
     text-align: center;
-    color: #ffeb3b;
-    text-shadow: 0 0 8px #ffeb3b;
+    display: none;
 }
 
 #restart-button {
@@ -62,58 +71,35 @@ body {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    background: #4caf50;
+    background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 8px;
-    transition: 0.3s;
-    display: none;
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
 #restart-button:hover {
-    background: #45a049;
+    background-color: #45a049;
     transform: scale(1.05);
-    box-shadow: 0 0 15px #76ff03;
 }
 
-/* Winner effect */
-.winner {
-    background-color: #4caf50 !important;
-    color: #fff;
-    animation: winnerGlow 1s infinite alternate;
-}
-
-@keyframes winnerGlow {
-    from {
-        transform: scale(1);
-        box-shadow: 0 0 15px #4caf50, 0 0 30px #4caf50;
-    }
-    to {
-        transform: scale(1.2);
-        box-shadow: 0 0 25px #76ff03, 0 0 50px #76ff03;
-    }
-}
-
-/* Footer */
-footer {
-    margin-top: 25px;
-    font-size: 14px;
-    text-align: center;
-}
-footer a {
-    color: #ffeb3b;
-    text-decoration: none;
-    font-weight: bold;
-}
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Mobile Responsive */
 @media screen and (max-width: 600px) {
-    .cell {
-        width: 80px;
-        height: 80px;
-        font-size: 28px;
+    .board {
+        max-width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    #game-board {
+        padding: 15px;
+    }
+
+    #game-over-message {
+        font-size: 18px;
+    }
+
+    #restart-button {
+        font-size: 16px;
+        padding: 10px 15px;
     }
 }
