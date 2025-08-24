@@ -24,7 +24,11 @@ To set up and run the XO Game on your local machine:
 
 ### 1️⃣ **Clone the Repository**  
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/Iqbolshoh/javascript-xo-game.git
+=======
+git clone [https://github.com/M-Ahmad-79/Game.git
+>>>>>>> ce7e01d3f4acb88eeee693dce1af355cb94189fb
 ```
 ### 2️⃣ **Navigate to the Project Directory**  
 ```bash
@@ -43,6 +47,7 @@ This project is open-source and available under the **MIT License**.
 
 ## 🤝 Contributing  
 🎯 Contributions are welcome! If you have suggestions or want to enhance the project, feel free to fork the repository and submit a pull request.
+<<<<<<< HEAD
 
 ## 📬 Connect with Me  
 💬 I love meeting new people and discussing tech, business, and creative ideas. Let’s connect! You can reach me on these platforms:
@@ -107,3 +112,5 @@ This project is open-source and available under the **MIT License**.
     </tr>
   </table>
 </div>
+=======
+>>>>>>> ce7e01d3f4acb88eeee693dce1af355cb94189fb
