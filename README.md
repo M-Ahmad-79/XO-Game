@@ -53,22 +53,24 @@ This project is open-source and available under the **MIT License**.
 💬 I love meeting new people and discussing tech, business, and creative ideas. Let’s connect! You can reach me on these platforms:
 
 <div align="center">
-  <table>
-    <tr>
-      <td>
-        <a href="mailto:mahmad937ak@gmail.com" target="_blank">
-          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/gmail.svg"
-               height="40" width="40" alt="Email" title="Email" />
-        </a>
-      </td>
-      <td>
-        <a href="www.linkedin.com/in/muhammad-ahmad-788b62338/" target="_blank">
-          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/linkedin.svg"
-               height="40" width="40" alt="LinkedIn" title="LinkedIn" />
-        </a>
-      </td>
-    </tr>
-  </table>
+ <table>
+  <tr>
+    <!-- Gmail -->
+    <td>
+      <a href="mailto:mahmad937ak@gmail.com" target="_blank">
+        <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/gmail.svg"
+             height="40" width="40" alt="Email" title="Email" />
+      </a>
+    </td>
+    <!-- LinkedIn -->
+    <td>
+      <a href="https://www.linkedin.com/in/muhammad-ahmad-788b62338/" target="_blank">
+        <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/linkedin.svg"
+             height="40" width="40" alt="LinkedIn" title="LinkedIn" />
+      </a>
+    </td>
+  </tr>
+</table>
 </div>
 =======
 >>>>>>> ce7e01d3f4acb88eeee693dce1af355cb94189fb
