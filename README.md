@@ -1,50 +1,109 @@
-# Quiz-Game
-A simple quiz game built using Python
+# 🎮 JavaScript XO Game
 
-## Game Instructions
-1. Check your Python version by typing python --version in terminal/cmd prompt.
-        If version is python 3.x you can continue.
-        If version is python 2.x, try: python3 --version.
-        If you receive a version replace 'python' with 'python3' for the rest of these instructions below.
+This is a **Tic-Tac-Toe (XO) game** implemented using **HTML, CSS, and JavaScript**. The game allows **two players** to compete on a **3x3 grid**.  
 
-2. Start the game: type python(3) question.py
+## 👀 Preview
 
-3. The game will run in the terminal. Answer the first question - whether you want to start the game. Select
-(a) Start the game
-(b) Exit.
+### 💻 **Desktop**
+![Desktop Preview](./src/images/desktop.png)
 
-4. Pick your interest
-        (a) Science (b) History of India (c) Commerce (d)Technology (e)World GK
-        You'll be presented with domain specific questions.
+### 📱 **Mobile**
+![Mobile Preview](./src/images/mobile.png)
 
-5. Read the general instructions prompt for point system information and how to answer the questions. Each question carries 2 points and there is a negative marking of -1 per question.
+## 🚀 Features 
 
-6. Answer each question. At the end of the game, you will be provided with the feedback of your responses. If incorrect, the correct answer will be displayed. You will also be provided a little insight into the question and your final score will be revealed to you.
+- ✅ **Responsive Design:** The game adapts to **all screen sizes**.
+- 🎮 **Interactive Game Board:** Players can **place X or O** by clicking on cells.
+- 🏆 **Winner Highlight:** The **winning combination** is highlighted in **green**.
+- 🤝 **Draw Detection:** If the game ends in a draw, a **message is displayed**.
+- 🔄 **Play Again Button:** A **restart button** allows players to reset the game and play again.
 
-7. The game will exit on its own. To play again, follow instructions from step 2.
+## 🛠️ Installation  
 
-#### If you find any bugs in the game, please visit https://github.com/cherryWood55/Quiz-Game/issues/ to report the issue. Enjoy the game!
+To set up and run the XO Game on your local machine:  
 
-#### If you like it, do not forget to give your feedback of this repository!
-
-### Contributors
-
+### 1️⃣ **Clone the Repository**  
+```bash
+git clone https://github.com/Iqbolshoh/javascript-xo-game.git
 ```
-    Diya Nag Chaudhury
-    Amitrajit Bose
-    David John Coleman II
-    Ryan J. Wilson
-    Candace H-V
-    Souvik Mondal
-    Prem Mali
-    Aayush Sarkar
-    Raghav Khullar
-    Pasan Jayawickrama
-    Linda Oglesbee
-    Kamuish
-    chanchalv18
-    dvfleet413
-    CrisCros
-    Manan311
-    Vyom Jain
+### 2️⃣ **Navigate to the Project Directory**  
+```bash
+cd javascript-xo-game
+```
+### 3️⃣ **Open the `index.html` File**  
+Simply open the `index.html` file in any modern **web browser** to start playing.  
 
+## 🖥 Technologies Used
+![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1C.svg?style=for-the-badge&logo=javascript&logoColor=black)
+
+## 📜 License
+This project is open-source and available under the **MIT License**.
+
+## 🤝 Contributing  
+🎯 Contributions are welcome! If you have suggestions or want to enhance the project, feel free to fork the repository and submit a pull request.
+
+## 📬 Connect with Me  
+💬 I love meeting new people and discussing tech, business, and creative ideas. Let’s connect! You can reach me on these platforms:
+
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <a href="https://iqbolshoh.uz" target="_blank">
+          <img src="https://img.icons8.com/color/48/domain.png" 
+               height="40" width="40" alt="Website" title="Website" />
+        </a>
+      </td>
+      <td>
+        <a href="mailto:iilhomjonov777@gmail.com" target="_blank">
+          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/gmail.svg"
+               height="40" width="40" alt="Email" title="Email" />
+        </a>
+      </td>
+      <td>
+        <a href="https://github.com/iqbolshoh" target="_blank">
+          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg"
+               height="40" width="40" alt="GitHub" title="GitHub" />
+        </a>
+      </td>
+      <td>
+        <a href="https://www.linkedin.com/in/iqbolshoh/" target="_blank">
+          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/linkedin.svg"
+               height="40" width="40" alt="LinkedIn" title="LinkedIn" />
+        </a>
+      </td>
+      <td>
+        <a href="https://t.me/iqbolshoh_777" target="_blank">
+          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/telegram.svg"
+               height="40" width="40" alt="Telegram" title="Telegram" />
+        </a>
+      </td>
+      <td>
+        <a href="https://wa.me/998997799333" target="_blank">
+          <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/whatsapp.svg"
+               height="40" width="40" alt="WhatsApp" title="WhatsApp" />
+        </a>
+      </td>
+      <td>
+        <a href="https://instagram.com/iqbolshoh_777" target="_blank">
+          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg"
+               height="40" width="40" alt="Instagram" title="Instagram" />
+        </a>
+      </td>
+      <td>
+        <a href="https://x.com/iqbolshoh_777" target="_blank">
+          <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white"
+               height="40" width="40" alt="X" title="X (Twitter)" />
+        </a>
+      </td>
+      <td>
+        <a href="https://www.youtube.com/@Iqbolshoh_777" target="_blank">
+          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg"
+               height="40" width="40" alt="YouTube" title="YouTube" />
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
