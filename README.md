@@ -24,15 +24,7 @@ To set up and run the XO Game on your local machine:
 
 ### 1️⃣ **Clone the Repository**  
 ```bash
-<<<<<<< HEAD
 git clone https://github.com/Iqbolshoh/javascript-xo-game.git
-=======
-<<<<<<< HEAD
-git clone https://github.com/Iqbolshoh/javascript-xo-game.git
-=======
-git clone https://github.com/M-Ahmad-79/Game.git
->>>>>>> ce7e01d3f4acb88eeee693dce1af355cb94189fb
->>>>>>> fb46cbdd11f22be87d5d068ee9757254b605ca0a
 ```
 ### 2️⃣ **Navigate to the Project Directory**  
 ```bash
@@ -51,16 +43,11 @@ This project is open-source and available under the **MIT License**.
 
 ## 🤝 Contributing  
 🎯 Contributions are welcome! If you have suggestions or want to enhance the project, feel free to fork the repository and submit a pull request.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> fb46cbdd11f22be87d5d068ee9757254b605ca0a
 
 ## 📬 Connect with Me  
 💬 I love meeting new people and discussing tech, business, and creative ideas. Let’s connect! You can reach me on these platforms:
 
 <div align="center">
-<<<<<<< HEAD
   <table>
     <tr>
       <td>
@@ -120,26 +107,3 @@ This project is open-source and available under the **MIT License**.
     </tr>
   </table>
 </div>
-=======
- <table>
-  <tr>
-    <!-- Gmail -->
-    <td>
-      <a href="mailto:mahmad937ak@gmail.com" target="_blank">
-        <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/gmail.svg"
-             height="40" width="40" alt="Email" title="Email" />
-      </a>
-    </td>
-    <!-- LinkedIn -->
-    <td>
-      <a href="https://www.linkedin.com/in/muhammad-ahmad-788b62338/" target="_blank">
-        <img src="https://github.com/gayanvoice/github-active-users-monitor/blob/master/public/images/icons/linkedin.svg"
-             height="40" width="40" alt="LinkedIn" title="LinkedIn" />
-      </a>
-    </td>
-  </tr>
-</table>
-</div>
-=======
->>>>>>> ce7e01d3f4acb88eeee693dce1af355cb94189fb
->>>>>>> fb46cbdd11f22be87d5d068ee9757254b605ca0a
